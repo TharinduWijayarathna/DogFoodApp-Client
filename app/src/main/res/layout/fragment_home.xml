@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/LayoutCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/space1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/LayoutCategoryName"
+                app:layout_constraintStart_toStartOf="@+id/LayoutCategoryName"
+                app:layout_constraintTop_toTopOf="@+id/LayoutCategoryName" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Categories"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space1" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:text="Slide"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/textView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintLayoutHomeCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Categorylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ConstraintLayoutHomeCategory"
+                app:layout_constraintEnd_toEndOf="@+id/ConstraintLayoutHomeCategory"
+                app:layout_constraintStart_toStartOf="@+id/ConstraintLayoutHomeCategory"
+                app:layout_constraintTop_toTopOf="@+id/ConstraintLayoutHomeCategory" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintLayoutHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/space4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/ConstraintLayoutHome"
+                app:layout_constraintStart_toStartOf="@+id/ConstraintLayoutHome"
+                app:layout_constraintTop_toTopOf="@+id/ConstraintLayoutHome" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Popular"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space4" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:text="Slide"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

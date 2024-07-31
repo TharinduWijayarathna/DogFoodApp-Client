@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_back"
+    tools:context=".ui.activities.MainActivity">
+
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="306dp"
+        android:layout_height="568dp"
+        android:background="@drawable/login_view_block"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="183dp"
+        android:layout_height="191dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+        app:srcCompat="@mipmap/logoicon_foreground" />
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="249dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/login_view_block"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+        app:srcCompat="@drawable/baseline_person_24"
+        />
+
+
+    <View
+        android:id="@+id/rectangle_3"
+        android:layout_width="249dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/login_view_block"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_3" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_3"
+        app:srcCompat="@drawable/baseline_lock_24"
+        />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Theme.Twice"
+        android:layout_width="111dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/basic_btn"
+        android:text="LOGIN"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_3"
+        app:shapeAppearance="@style/Base.Theme.Twice" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dog Nutrition"
+        android:textColor="@color/btn_color"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rectangle_2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+        app:layout_constraintVertical_bias="0.826" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="102dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="8dp"
+        android:text="forgot password?"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_3" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="294dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="don’t have an account?  "
+        android:textAlignment="center"
+
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="59dp"
+        android:layout_height="20dp"
+        android:text="Sign Up"
+        android:textColor="@color/btn_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.516" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
