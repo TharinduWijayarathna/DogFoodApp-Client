@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:text="Price Total:"
             android:textAlignment="textEnd"
-            android:textColor="@color/btn_color"
+            android:textColor="@color/white"
             android:textSize="25dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/textView21"
