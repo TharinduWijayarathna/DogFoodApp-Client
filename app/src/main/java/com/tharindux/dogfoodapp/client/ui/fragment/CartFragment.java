@@ -67,7 +67,6 @@ public class CartFragment extends Fragment {
 
 //Load cart
         firebaseFirestore = FirebaseFirestore.getInstance();
-        Toast.makeText(getActivity(), "Loading.........", Toast.LENGTH_LONG).show();
                 firebaseFirestore.collection("User").document(textView24.getText().toString())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -213,7 +212,6 @@ public class CartFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Loading.........", Toast.LENGTH_LONG).show();
                 SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss");
                 Date date = new Date();
 

@@ -149,10 +149,6 @@ public class ProfileFragment extends Fragment {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Loading....", Toast.LENGTH_LONG).show();
-
-
-
                 Map<String, Object> User = new HashMap<>();
                 User.put("name", NameFields.getText().toString());
                 User.put("password", PasswordFields.getText().toString());
@@ -227,8 +223,6 @@ public class ProfileFragment extends Fragment {
     }
 
     private void UploadFile(Uri data){
-//        Toast.makeText(getActivity(), "Uploading image...", Toast.LENGTH_SHORT).show();
-
         StorageReference reference = storageReference.child("UserProfile/pic"+NameFields.getText().toString()+".png");
         reference.putFile(data)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

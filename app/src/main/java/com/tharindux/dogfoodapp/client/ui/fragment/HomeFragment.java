@@ -28,6 +28,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -155,7 +156,8 @@ public class HomeFragment extends Fragment {
                                     for (Map.Entry<String, Object> unite : productlist.entrySet()) {
                                         if (unite.getKey().equals("Price")) {
                                             TextView textView9 = view1.findViewById(R.id.textView9);
-                                            textView9.setText(unite.getValue().toString());
+                                            textView9.setText(DecimalFormat.getInstance().format(Double.parseDouble(unite.getValue().toString())) + ".00");
+
                                         }
                                     }
                                     for (Map.Entry<String, Object> unite : productlist.entrySet()) {
