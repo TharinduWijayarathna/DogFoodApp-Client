@@ -83,7 +83,6 @@ public class Registration extends AppCompatActivity {
                                                             @Override
                                                             public void onSuccess(Void aVoid) {
                                                                 Intent i = new Intent(Registration.this, MainLayout.class);
-//                                                    i.putExtra("email",email);
                                                                 startActivity(i);
                                                             }
                                                         })
@@ -94,13 +93,10 @@ public class Registration extends AppCompatActivity {
                                                                         Toast.LENGTH_SHORT).show();
                                                             }
                                                         });
-//                                    updateUI(user);
                                             } else {
-                                                // If sign in fails, display a message to the user.
                                                 System.out.println("createUserWithEmail:failure"+ task.getException());
                                                 Toast.makeText(Registration.this, task.getException().toString(),
                                                         Toast.LENGTH_SHORT).show();
-//                                    updateUI(null);
                                             }
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {

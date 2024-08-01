@@ -44,16 +44,25 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                String emailText = email.getText().toString().trim();
+                String passwordText = password.getText().toString().trim();
+
+                if (emailText.isEmpty() || passwordText.isEmpty()) {
+                    Toast.makeText(main, "Please enter both email and password.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                mAuth.signInWithEmailAndPassword(emailText, passwordText)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Intent i = new Intent(main, MainLayout.class);
+                                    Toast.makeText(main, "Authentication successful.", Toast.LENGTH_SHORT).show();
                                     startActivity(i);
                                 } else {
-
+                                    Toast.makeText(main, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -63,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
             }
+
         });
 
         TextView tv=(TextView)findViewById(R.id.textView5);
