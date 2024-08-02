@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import com.tharindux.dogfoodapp.client.ui.fragment.HomeFragment;
+import com.tharindux.dogfoodapp.client.ui.fragment.InfoFragment;
 import com.tharindux.dogfoodapp.client.ui.fragment.OrderHistoryFragment;
 import com.tharindux.dogfoodapp.client.ui.fragment.ProfileFragment;
 import com.tharindux.dogfoodapp.client.R;
@@ -42,15 +43,16 @@ public class MainLayout extends AppCompatActivity implements NavigationBarView.O
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getIdToken() instead.
             String uid = user.getUid();
-        }else {
+        } else {
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
         }
     }
-        BottomNavigationView bottomNavigationView;
 
-        @Override
-        protected void onCreate (Bundle savedInstanceState){
+    BottomNavigationView bottomNavigationView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainlayout);
 
@@ -63,18 +65,21 @@ public class MainLayout extends AppCompatActivity implements NavigationBarView.O
         displayFragment(new HomeFragment());
 
     }
+
     @Override
-    public boolean onNavigationItemSelected (@NonNull MenuItem item){
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Fragment fragment;
         if (R.id.home == item.getItemId()) {
             fragment = new HomeFragment();
-        }else if (R.id.cart == item.getItemId()) {
+        } else if (R.id.cart == item.getItemId()) {
             fragment = new CartFragment();
         } else if (R.id.profile == item.getItemId()) {
             fragment = new ProfileFragment();
         } else if (R.id.PaymentHistory == item.getItemId()) {
-        fragment = new OrderHistoryFragment();
-        }else {
+            fragment = new OrderHistoryFragment();
+        } else if (R.id.info == item.getItemId()) {
+            fragment = new InfoFragment();
+        } else {
             fragment = new HomeFragment();
         }
         displayFragment(fragment);
@@ -83,7 +88,7 @@ public class MainLayout extends AppCompatActivity implements NavigationBarView.O
 
     }
 
-        private void displayFragment(Fragment fragment){
+    private void displayFragment(Fragment fragment) {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
 

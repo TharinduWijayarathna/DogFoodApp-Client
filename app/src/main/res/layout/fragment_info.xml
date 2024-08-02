@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_back2"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.CartFragment">
+
+    <!-- TextView for dog nutrition information -->
+    <TextView
+        android:id="@+id/dogNutritionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Proper dog nutrition is essential for a healthy and happy pet. Make sure your dog gets a balanced diet rich in protein, vitamins, and minerals."
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- First ImageView taking full width -->
+
+            <!-- LinearLayout containing the second and third ImageViews horizontally -->
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="411dp"
+                android:layout_height="240dp"
+                android:padding="12dp"
+                android:src="@drawable/banner2" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="411dp"
+                android:layout_height="240dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:src="@drawable/banner" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="411dp"
+                android:layout_height="240dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:src="@drawable/banner3" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

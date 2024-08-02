@@ -23,6 +23,13 @@
         android:title="Profile" />
 
     <item
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_book_24"
+        android:title="Info" />
+
+    <item
         android:id="@+id/PaymentHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
